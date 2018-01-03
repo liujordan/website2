@@ -25,7 +25,9 @@ SECRET_KEY = 'kd3=)b!=zu2v#n7_%+qb3he0ng#@%&js_6ra+cn#pr7(-u140w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'sturdy-umbrella.herokuapp.com',
+]
 
 
 # Application definition
