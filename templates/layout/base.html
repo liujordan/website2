@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	{% if title %}title{% else %}Home{% endif %}
+</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103251374-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-103251374-1');
+	</script>
+</head>
+<body>
+	<div class="container">
+		<p>this is from the base template</p>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
