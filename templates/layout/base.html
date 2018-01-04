@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-light_blue.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103251374-1"></script>
@@ -27,7 +29,7 @@
     <div class="mdl-layout mdl-js-layout">
       <!-- Header & Navigation Bar--> 
       <div class="mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--scroll">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent">
           <div class="mdl-layout mdl-js-layout">
             <!-- Those 3 lines that bring out the drawer from the left -->
             <div class="mdl-layout__drawer">
@@ -44,9 +46,12 @@
             <span class="mdl-layout-title">{{title}}</span>
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation">
-              <a class="mdl-navigation__link" href="#"><i class="material-icons">home</i></a>
-              <a class="mdl-navigation__link" href="#">About</a>
-              <a class="mdl-navigation__link" href="#">Contact</a>
+              <a class="mdl-navigation__link" href="#">
+                <label class="mdl-button mdl-js-button mdl-button--icon">
+                  <i class="material-icons">home</i>
+                </label>
+              </a>
+              <a class="mdl-navigation__link" href="#"><i class="material-icons">info_outline</i></a>
             </nav>
           </div>
         </header>
