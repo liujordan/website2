@@ -18,5 +18,6 @@ from django.urls import path, re_path
 from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
+    re_path('test', TestView.as_view(), name='test'),
     re_path('$', HomeView.as_view(), name='home'),
 ]

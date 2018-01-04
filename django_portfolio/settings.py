@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'sturdy-umbrella.herokuapp.com',
+    'localhost',
 ]
 
 
