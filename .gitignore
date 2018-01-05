@@ -4,3 +4,4 @@ staticfiles
 .env
 db.*
 env/
+node_modules/

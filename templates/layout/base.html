@@ -28,17 +28,17 @@
 	<body class="mdl-base">
     <div class="mdl-layout mdl-js-layout">
       <!-- Header & Navigation Bar--> 
-      <div class="mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent">
-          <div class="mdl-layout mdl-js-layout">
-            <!-- Those 3 lines that bring out the drawer from the left -->
-            <div class="mdl-layout__drawer">
-              <span class="mdl-layout-title">Drawer Title</span>
-              <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">Home</a>
-                <a class="mdl-navigation__link" href="">Features</a>
-                <a class="mdl-navigation__link" href="">About Us</a>
-                <a class="mdl-navigation__link" href="">Log Out</a>
+      <div class="mdl-layout--fixed-header mdl-shadow--20dp">
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+          <div class="mdl-layout mdl-js-layout color-primary--dark">
+            <!-- Drawer Content-->
+            <div class="mdl-layout__drawer color-primary--dark mdl-color-text--white">
+              <span class="mdl-layout-title">Username</span>
+              <nav class="mdl-navigation color-text-primary--light">
+                <a class="mdl-navigation__link mdl-color-text--white" href="">View Profile</a>
+                <a class="mdl-navigation__link mdl-color-text--white" href="">Account settings</a>
+                <a class="mdl-navigation__link mdl-color-text--white" href="">Friends</a>
+                <a class="mdl-navigation__link mdl-color-text--white" href="">Log Out</a>
              </nav>
             </div>
           </div>
@@ -46,12 +46,17 @@
             <span class="mdl-layout-title">{{title}}</span>
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation">
+              {% ifnotequal title "Home" %}
               <a class="mdl-navigation__link" href="#">
                 <label class="mdl-button mdl-js-button mdl-button--icon">
                   <i class="material-icons">home</i>
                 </label>
               </a>
-              <a class="mdl-navigation__link" href="#"><i class="material-icons">info_outline</i></a>
+              {% endifnotequal %}
+              <a class="mdl-navigation__link" href="#">
+                <label class="mdl-button mdl-js-button mdl-button--icon">
+                  <i class="material-icons">info_outline</i></a>
+                </label>
             </nav>
           </div>
         </header>
@@ -67,6 +72,7 @@
           <span>Some more information</span>
         </footer>
       </main>
+      
     </div>
     <!-- Material Design Lite -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
