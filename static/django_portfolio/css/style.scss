@@ -1,0 +1,29 @@
+$main-text: rgb(132, 132, 132);
+$header-bg: #ffffff;
+$header-text: $main-text;
+html {
+	color: $main-text;
+}
+
+.site-header {
+	color: $header-text;
+	background-color: $header-bg;
+}
+
+.site-header .mdl-layout__header-row {
+	color: $header-text;
+}
+
+.site-header .mdl-navigation__link {
+	color: $header-text;
+}
+
+.aux {
+	max-width: 61.25rem;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.greyed { 
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}

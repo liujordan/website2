@@ -1,0 +1,42 @@
+$section-white: #ffffff;
+$section-grey: rgba(0,0,0,0.05);
+$bg-overlay-text: white;
+.hero {
+
+}
+.hero__bg-container {
+	background-image: url('https://i.imgur.com/vMq0aLe.jpg');
+	background-position: center center;
+	background-size:cover;
+	height: 40em;
+}
+.hero__bg-overlay {
+	padding: 12% 8% 12% 8%;
+	color: $bg-overlay-text;
+}
+.hero__bg-overlay > h1, h4{
+	font-weight: 100;
+	text-align: center;
+}
+
+.hero__button {
+	position: absolute;
+	left: 50%;
+    margin-top: -1.75rem;
+    margin-bottom: -1.75rem;
+    margin-left: -1.75rem;
+}
+
+.site-section {
+	min-height: 30rem;
+}
+.site-section--grey {
+	background-color: $section-grey;
+}
+.site-section--white { 
+	background-color: $section-white;
+}
+.scroll-fade {
+	opacity:0;
+	background-color:black;
+}

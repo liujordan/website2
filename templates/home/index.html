@@ -1,40 +1,54 @@
 {% extends "layout/base.html" %}
 {% load static %}
+{% load sass_tags %}
+{% block css %}
+    <link rel="stylesheet" href="{% sass_src "django_portfolio/css/index.scss" %}">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300thin,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
+{% endblock %}
+
 {% block content %}
-<!-- Wide card with share menu button -->
-<style>
-  .menu-content {
-
-  }
-  .menu-option {
-    outline-width: 0px;
-  }
-  .menu-content > .mdl-grid {
-
-  }
-  .mdl-grid.mdl-cell {
-    padding: 0px;
-    margin: 0px;
-  }
-</style>
 
 <div class="menu-content">
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-js-ripple-effect mdl-cell--9-col mdl-card menu-option mdl-color--green-A400"><span class="mdl-ripple"></span></div>
-    <div class="mdl-cell mdl-cell--3-col mdl-grid mdl-grid--4-col">
-      <div class="mdl-cell mdl-js-ripple-effect mdl-cell--12-col mdl-card menu-option mdl-color--pink-A400"><span class="mdl-ripple"></span></div>
-      <div class="mdl-cell mdl-js-ripple-effect mdl-cell--6-col mdl-card menu-option mdl-color--purple-A400"><span class="mdl-ripple"></span></div>
-      <div class="mdl-cell mdl-js-ripple-effect mdl-cell--6-col mdl-card menu-option color-primary--light"><span class="mdl-ripple"></span></div>
+  <div class="hero">
+    <div class="hero__bg-container greyed">
+      <div class="hero__bg-overlay">
+        <h1>Hi, I'm Jordan Liu</h1>
+        <h4>Please hire me.</h4>
+      </div>
     </div>
-    <div class="mdl-cell mdl-cell--4-col mdl-grid mdl-grid--4-col">
-      <div class="mdl-cell mdl-js-ripple-effect mdl-card menu-option color-primary--light"><span class="mdl-ripple"></span></div>
-      <div class="mdl-cell mdl-js-ripple-effect mdl-cell--8-col mdl-card menu-option mdl-color--pink-A400"><span class="mdl-ripple"></span></div>
-      <div class="mdl-cell mdl-js-ripple-effect mdl-cell--8-col mdl-card menu-option color-primary--light"><span class="mdl-ripple"></span></div>
-      <div class="mdl-cell mdl-js-ripple-effect mdl-card menu-option mdl-color--green-A400"><span class="mdl-ripple"></span></div>
-    </div>
-    <div class="mdl-cell mdl-js-ripple-effect mdl-cell--4-col mdl-card menu-option color-primary--light"><span class="mdl-ripple"></span></div>
-    <div class="mdl-cell mdl-js-ripple-effect mdl-cell--3-col mdl-card menu-option mdl-color--pink-A400"><span class="mdl-ripple"></span></div>
-    <div class="mdl-cell mdl-js-ripple-effect mdl-cell--1-col mdl-card menu-option mdl-color--green-A400"><span class="mdl-ripple"></span></div>
+    <button class="hero__button mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-color--white mdl-js-ripple-effect mdl-shadow--12dp">
+      <i class="material-icons">home</i>
+    </button>
   </div>
+  <section class="site-section site-section--white" id="section-about">
+    <div class="aux">
+      <div class="mdl-grid">
+        <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          something here
+        </div>
+        <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          something here
+        </div>
+        another thing here
+      </div>
+    </div>
+  </section>
+  <section class="site-section site-section--grey">
+    <div class="aux">
+      <div class="scroll-fade">
+        something here
+      </div>
+    </div>
+  </section>
+  <section class="site-section site-section--white">
+    <div class="aux">
+      something here
+    </div>
+  </section>
 </div>
+{% endblock %}
+
+{% block js %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{% static "django_portfolio/js/index.js" %}"></script>
 {% endblock %}
