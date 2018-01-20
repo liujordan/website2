@@ -5,4 +5,8 @@ $(document).ready(function() {
             scrollTop:0
         }, 1000);
     });
+
+    $('#home_logo').clicked(function() {
+        window.location.href = "/";
+    });
 });

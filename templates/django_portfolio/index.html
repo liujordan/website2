@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="menu-content">
   <div class="hero">
     <div class="hero__bg-container greyed">
@@ -26,30 +25,58 @@
         </div>
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
           <div class="site-section-content textbox">
-            <h1>A little bit about me</h1>
-            <p>I'm Jordan and I love to learn! I'm a second year student studying software engineering at University of Toronto Scarborough. I am a cunt because I don't lock in.</p>
+            <h1>A bit about me</h1>
+            <p>I'm Jordan and I love to learn! I'm a second year student studying software engineering at University of Toronto Scarborough. I am an goal-oriented individual that constantly seeks challenges for self-improvement and overall personal growth.</p>
           </div>
-          <span><a href='https://www.freepik.com/free-vector/white-isometric-factory_1086486.htm'>Designed by Freepik</a></span>
+          <!-- <span><a href='https://www.freepik.com/free-vector/white-isometric-factory_1086486.htm'>Designed by Freepik</a></span> -->
         </div>
       </div>
     </div>
   </section>
-  <section class="site-section site-section--grey">
+  <section class="site-section site-section--grey" id="section-goals">
     <div class="aux">
-      <h1>Projects</h1>
       <div class="mdl-grid">
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-          <a href="/quickregister/">quickregister</a>
-        </div> 
+          <div class="site-section-content textbox">
+            <h1>Goals</h1>
+            <p>
+              As a student, I am currently focusing on learning and developing the skills needed to succeed as I want to set a strong foundation for my future self. Here are some of my short-term personal goals that align with this objective.<br>
+              <br>
+              - maintain consistency (eg. studying and exercising)<br>
+              - find a position computer science (preferably next summer)<br>
+              - go to a brand new city and learn the culture there<br>
+              - create my own website and other various personal projects<br>
+            </p>
+          </div>
+        </div>
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-          something here
+          <div class="site-section-content centered">
+            <img src="{% static 'django_portfolio/img/checklist.png' %}">
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="site-section site-section--white">
+  <section class="site-section site-section--white" id="section-strengths">
     <div class="aux">
-      something here
+      <div class="mdl-grid">
+        <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="site-section-content centered">
+            <img src="{% static 'django_portfolio/img/factory.png' %}">
+          </div>
+        </div>
+        <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="site-section-content textbox">
+            <h1>Strengths</h1>
+            <p>
+              <b>Communication</b> - I love sharing my ideas and getting my point across. However, communication is a two-way street. Although I like being heard, I find it just as important to listen. I enjoy listening to other people's passions, goals, and stories as they provide me with brand new perspectives that I can learn from.<br>
+              <br>
+              <b>Positivity</b> - I strive to positively impact the lives of others as I find joy in making others happy. I truly believe that it is this characteristic that differentiates me from others. Others may be highly skilled in their respective fields, but I am one that aims to makes everyone around me better.<br>
+            </p>
+          </div>
+          <!-- <span><a href='https://www.freepik.com/free-vector/white-isometric-factory_1086486.htm'>Designed by Freepik</a></span> -->
+        </div>
+      </div>
     </div>
   </section>
 </div>
