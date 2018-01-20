@@ -20,17 +20,36 @@ $bg-overlay-text: white;
 	text-align: center;
 }
 
-.hero__button {
-	position: absolute;
-	left: 50%;
-    margin-top: -1.75rem;
-    margin-bottom: -1.75rem;
-    margin-left: -1.75rem;
-}
-
 .site-section {
 	min-height: 30rem;
+	vertical-align: middle;
 }
+.site-section img {
+    display: block;
+	margin-left: auto;
+    margin-right: auto;
+	width: auto;
+	max-height: 20rem;
+}
+
+.site-section-content--centered {
+	height: 100%;
+	justify-content: center;
+  	display: flex;
+  	align-items: center;
+}
+.site-section-content p {
+	font-weight: 300;
+}
+.site-section-content h1 {
+	font-weight: 200;
+	font-size: 3.5rem;
+}
+
+.textbox {
+	padding: 10%;
+}
+
 .site-section--grey {
 	background-color: $section-grey;
 }

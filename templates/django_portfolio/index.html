@@ -15,18 +15,21 @@
         <h4>Please hire me.</h4>
       </div>
     </div>
-    <button class="hero__button mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-color--white mdl-js-ripple-effect mdl-shadow--12dp">
-      <i class="material-icons">home</i>
-    </button>
   </div>
   <section class="site-section site-section--white" id="section-about">
     <div class="aux">
       <div class="mdl-grid">
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-          something here
+          <div class="site-section-content site-section-content--centered">
+            <img src="{% static 'django_portfolio/img/uoft_logo.png' %}">
+          </div>
         </div>
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-          something here
+          <div class="site-section-content textbox">
+            <h1>A little bit about me</h1>
+            <p>I'm Jordan and I love to learn! I'm a second year student studying software engineering at University of Toronto Scarborough. I am a cunt because I don't lock in.</p>
+          </div>
+          <span><a href='https://www.freepik.com/free-vector/white-isometric-factory_1086486.htm'>Designed by Freepik</a></span>
         </div>
       </div>
     </div>
@@ -37,7 +40,7 @@
       <div class="mdl-grid">
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
           <a href="/quickregister/">quickregister</a>
-        </div>
+        </div> 
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
           something here
         </div>
@@ -53,6 +56,15 @@
 {% endblock %}
 
 {% block js %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="{% static "django_portfolio/js/index.js" %}"></script>
+  <!-- <script type="text/javascript" src="{% static "django_portfolio/js/index.js" %}"></script> -->
+  <script type="text/javascript">
+    $('#hero_down_button').click(function() {
+      console.log("clicked")
+      var offset = $('#section-about').offset()
+      offset.top -= 20;
+      $("html, body").animate({
+        scrollTop: "300px"
+      });
+    });
+  </script>
 {% endblock %}
