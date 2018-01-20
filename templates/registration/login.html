@@ -1,0 +1,27 @@
+{% extends "layout/base.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block css %}
+    <link rel="stylesheet" href="{% sass_src "django_portfolio/css/login.scss" %}">
+{% endblock %}
+
+{% block content %}
+{% if next %}
+<form action="{% url 'login' %}?next={{next}}" method="post" >
+{%else%}
+<form action="{% url 'login' %}" method="post" >
+{% endif %}
+	{% csrf_token %}
+	<td>{{ form.username.label_tag}}</td>
+	<td>{{ form.username }}</td>
+	<br>
+	<td>{{ form.password.label_tag}}</td>
+	<td>{{ form.password }}</td>
+	<br>
+	<input type="hidden" name="next" value="{{ next }}">
+	<input type="submit" value="Submit" />
+</form>
+
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
+{% endblock %}

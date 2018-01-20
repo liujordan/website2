@@ -3,7 +3,6 @@
 {% load sass_tags %}
 {% block css %}
     <link rel="stylesheet" href="{% sass_src "django_portfolio/css/index.scss" %}">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300thin,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
 {% endblock %}
 
 {% block content %}
@@ -29,14 +28,19 @@
         <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
           something here
         </div>
-        another thing here
       </div>
     </div>
   </section>
   <section class="site-section site-section--grey">
     <div class="aux">
-      <div class="scroll-fade">
-        something here
+      <h1>Projects</h1>
+      <div class="mdl-grid">
+        <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <a href="/quickregister/">quickregister</a>
+        </div>
+        <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          something here
+        </div>
       </div>
     </div>
   </section>

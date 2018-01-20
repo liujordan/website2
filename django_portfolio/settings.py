@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'sass_processor',
     'django.contrib.staticfiles',
+    'quickregister',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,5 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
+
+LOGIN_REDIRECT_URL = '/'
