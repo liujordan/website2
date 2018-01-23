@@ -1,0 +1,62 @@
+{% extends "layout/base.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block css %}
+  <link rel="stylesheet" href="{% sass_src "django_portfolio/css/projects.scss" %}">
+  <!-- Devicon -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="aux">
+		<div id="project-content" class="mdl-card mdl-shadow--2dp">
+			<div class="mdl-card__title">
+		    <h2 class="mdl-card__title-text"><i class="devicon-csharp-plain"></i></h2>
+		  </div>
+		  <div class="mdl-card__supporting-text">
+		    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		    Mauris sagittis pellentesque lacus eleifend lacinia...
+		  </div>
+		</div>
+		<div class="scrollmenu" id="project-scroll-bar">
+			<div id="project-item-row" class="scrollmenu-row">
+				{% for project in projects %}
+					{{ project | safe}}
+				{% endfor %}
+				<!-- <div class="project-item">
+					<div class="project-item-icon">
+						<i class="devicon-csharp-plain"></i>
+					</div>
+				</div>
+				<div class="project-item" style="left: 40rem;">
+					<div class="project-item-icon">
+						<i class="devicon-cplusplus-plain"></i>
+					</div>
+				</div>
+				<div class="project-item">
+					<div class="project-item-icon">
+						<i class="devicon-chrome-plain"></i>
+					</div>
+				</div>
+				<div class="project-item">something</div>
+				<div class="project-item">
+					<div class="project-item-icon">
+						<i class="devicon-c-plain"></i>
+					</div>
+				</div> -->
+			</div>
+			<div class="scrollmenu-row">
+				{{ lines | safe}}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+		{% for js in js %}
+			{{ js | safe}}
+		{% endfor %}
+{% endblock %}
