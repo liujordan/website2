@@ -18,6 +18,10 @@ html {
 	background-color: $header-bg;
 }
 
+.mdl-layout__drawer-button {
+	color: rgba(0,0,0,0.3);
+}
+
 .site-header .mdl-layout__header-row {
 	color: $header-text;
 }
