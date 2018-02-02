@@ -1,0 +1,77 @@
+{% extends "layout/base.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block css %}
+<link rel="stylesheet" href="{% sass_src "tester/css/test.scss" %}">
+<link rel="stylesheet" href="{% sass_src "games/css/clicker.scss" %}">
+<style type="text/css">
+	.mdl-navigation__link {
+		display: inline-block;
+	}
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+	  <div class="drawer mdl-layout__drawer">
+	    <span class="mdl-layout-title">Title</span>
+	    <ul class="mdl-list">
+	    	<li class="mdl-list__item mdl-list__item--two-line">
+	    		<span class="mdl-list__item-primary-content">
+				    <img class="mdl-list__item-avatar" src='{% static "icons/space/planet-earth.svg"%}'>
+					<span>Earth</span>
+					<span class="mdl-list__item-sub-title">We're all gonna die one day</span>
+	    		</span>
+
+				<span class="mdl-list__item-secondary-content">
+					<span class="mdl-list__item-secondary-info">Actor</span>
+					<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+				</span>
+	    	</li>
+	    </ul>
+	  </div>
+	  <main class="mdl-layout__content noscroll">
+	    <div class="container">
+	    	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+			 	<div class="mdl-tabs__tab-bar">
+		      		<a href="#resources-panel" class="mdl-tabs__tab is-active">Resources</a>
+			      	<a href="#imports-panel" class="mdl-tabs__tab">Imports</a>
+			      	<a href="#exports-panel" class="mdl-tabs__tab">Exports</a>
+			  	</div>
+			  	<div class="mdl-tabs__panel is-active" id="resources-panel">
+			  		<div class="mdl-grid">
+			  			
+			  		</div>
+				    <ul>
+						<li>Eddard</li>
+						<li>Catelyn</li>
+						<li>Robb</li>
+						<li>Sansa</li>
+						<li>Brandon</li>
+						<li>Arya</li>
+						<li>Rickon</li>
+				    </ul>
+			  </div>
+			  <div class="mdl-tabs__panel" id="imports-panel">
+			    <ul>
+			      	<li>Tywin</li>
+			      	<li>Cersei</li>
+			      	<li>Jamie</li>
+			      	<li>Tyrion</li>
+			    </ul>
+			  </div>
+			  <div class="mdl-tabs__panel" id="exports-panel">
+			    <ul>
+			      	<li>Viserys</li>
+			      	<li>Daenerys</li>
+			    </ul>
+			  </div>
+			</div>
+	    	<div id="upgrades"></div>
+	    </div>
+	  </main>
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+{% endblock %}

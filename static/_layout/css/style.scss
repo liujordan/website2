@@ -5,12 +5,16 @@ html {
 	color: $main-text;
 }
 
-.redb {
-	background-color: red;
+.round {
+	border-radius: 50%;
 }
-
-.greenb {
-	background-color: green;
+.noscroll {
+	overflow: hidden;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 100vh;
 }
 
 .mdl-layout__drawer-button {

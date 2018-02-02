@@ -24,4 +24,5 @@ urlpatterns = [
     path('accounts/profile/', include('profiles.urls')),
     path('test/', TestView.as_view(), name='test'),
     path('projects/', ProjectsView.as_view(), name='projects'),
+    path('games/', include('games.urls')),
 ]

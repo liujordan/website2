@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django_portfolio.views import BaseView
 
-# Create your views here.
+class ClickerView(BaseView):
+	title = 'Clicker Game'
+	template_name = 'games/clicker.html'
