@@ -1,0 +1,31 @@
+{% extends "layout/base.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'games/css/ponds/spatial_style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="masthead">
+        <p>the great pond</p>
+    </div>
+    <div id="div0" class="pond">
+        <p><a href="javascript:Toggle(0)" id="arrow0" class="button">+</a>Pond of life</p>
+        <div id="container0" style="display: none"></div>
+    </div>
+    <a href="javascript:showInstances()" class="button">Show Instances</a>
+    <a href="javascript:showPonds()" class="button">Show Types</a>
+
+    <div class="show">
+        <div id="instances"></div>
+        <div id="ponds"></div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'games/js/ponds/spatial_pond.js' %}"></script>
+    <script type="text/javascript" src="{% static 'games/js/ponds/spatial_pond_types.js' %}"></script>
+    <script type="text/javascript">
+        startPond('Pond');
+    </script>
+{% endblock %}

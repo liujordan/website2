@@ -1,0 +1,44 @@
+{% extends "layout/base.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block css %}
+    <link rel="stylesheet" href="{% sass_src "django_portfolio/css/index.scss" %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <section class="site-section site-section--white" id="section-about">
+        <div class="aux">
+          <div class="mdl-grid">
+            <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <div class="site-section-content textbox">
+                <canvas class="aux" id="canvas" width="400" height="400">Oops!</canvas>
+              </div>
+            </div>
+            <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <div class="site-section-content centered">
+                <div class="mdl-grid">
+                <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                    <button onclick="setShape('cube')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                      Cube
+                    </button>
+                </div>
+                <div class="mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                    <button onclick="setShape('octahedron')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                      Octahedron
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <br>
+    
+</div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'games/js/shapes/shapes.js' %}"></script>
+{% endblock %}
