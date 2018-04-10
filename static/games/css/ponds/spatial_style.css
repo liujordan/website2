@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
 	font-family: "Panton-BlackCaps";
 	src: url('fonts/Panton-BlackCaps.otf');
 }
@@ -13,22 +13,23 @@
 @font-face {
 	font-family: "Panton-LightitalicCaps";
 	src: url('fonts/Panton-LightitalicCaps.otf');
-}*/
-
+}
 html {
-	/*font-family: "Panton-LightCaps", Times, Serif;*/
-	-webkit-font-smoothing: antialiased !important;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	background-color: #196f75;
-	color: #5d6060;
-	font-size-adjust: 0.5;
-	/*text-transform: uppercase;*/
 }
 a {
 	color: #5d6060;
 	text-decoration: none;
 }
 .pond {
+	font-family: "Panton-LightCaps", Times, Serif;
+	-webkit-font-smoothing: antialiased !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	color: #5d6060;
+	font-size-adjust: 0.5;
+	text-transform: uppercase;
+
+
 	margin: 5px 0px 5px 16px;
 	overflow: auto;
 	background-color: #c1faff;

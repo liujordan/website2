@@ -2,15 +2,16 @@
 {% load static %}
 {% load sass_tags %}
 {% block css %}
+    <link rel="stylesheet" href="{% sass_src "django_portfolio/css/index.scss" %}">
     <link rel="stylesheet" href="{% static 'games/css/ponds/spatial_style.css' %}">
 {% endblock %}
 
 {% block content %}
     <div class="masthead">
-        <p>the great pond</p>
+        <p>The Great Pond</p>
     </div>
     <div id="div0" class="pond">
-        <p><a href="javascript:Toggle(0)" id="arrow0" class="button">+</a>Pond of life</p>
+        <p><a href="javascript:Toggle(0)" id="arrow0" class="button">+</a>Big ass pond</p>
         <div id="container0" style="display: none"></div>
     </div>
     <a href="javascript:showInstances()" class="button">Show Instances</a>
